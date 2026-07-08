@@ -1,0 +1,26 @@
+.section {
+	margin: auto;
+	display: grid;
+	gap: 1em;
+	justify-items: center;
+	grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+	padding: 1em;
+}
+
+/* @media (min-width: 400px) {
+	.section {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (min-width: 800px) {
+	.section {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media (min-width: 1000px) {
+	.section {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+} */
