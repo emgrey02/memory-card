@@ -1,5 +1,9 @@
 import styles from './CardContainer.module.css';
 
-export const CardContainer = ({ children }) => {
+interface ContainerProps {
+	children: React.ReactNode;
+}
+
+export const CardContainer = ({ children }: ContainerProps) => {
 	return <section className={styles.section}>{children}</section>;
 };

@@ -1,6 +1,11 @@
 import styles from './ScoreCard.module.css';
 
-export const ScoreCard = ({ currentScore, bestScore }) => {
+interface ScoreCardProps {
+	currentScore: number;
+	bestScore: number;
+}
+
+export const ScoreCard = ({ currentScore, bestScore }: ScoreCardProps) => {
 	return (
 		<section className={styles.section}>
 			<div className={styles.scoreGridCtn}>
