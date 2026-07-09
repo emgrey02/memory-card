@@ -1,20 +1,24 @@
 import styles from './MemoryCard.module.css';
-import { useState } from 'react';
 
-export const MemoryCard = ({ imgUrl = null, name, team }) => {
-	const [selected, setSelected] = useState(false);
+interface MemoryCardProps {
+	imgUrl: string;
+	name: string;
+	team: string;
+	handleCardClick: (name: string) => void;
+}
 
-	const handleClick = () => {
-		if (selected) {
-			// reset current score
-		} else {
-			setSelected(true);
-		}
-	};
-
+export const MemoryCard = ({
+	imgUrl,
+	name,
+	team,
+	handleCardClick,
+}: MemoryCardProps) => {
 	return (
 		<div className={styles.cardCtn}>
-			<button className={styles.button} onClick={handleClick}>
+			<button
+				className={styles.button}
+				onClick={() => handleCardClick(name)}
+			>
 				<div className={styles.imgCtn}>
 					<img className={styles.image} src={imgUrl} />
 				</div>
